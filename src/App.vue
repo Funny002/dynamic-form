@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="App">
+    <h3 style="padding: 10px 0;">editor</h3>
+    <dynamic-form-editor style="height: 800px;" v-model="form.data" :conf.sync="form.conf"/>
+    <h3 style="padding: 10px 0;">views</h3>
+    {{ dateValue }}
+    <date :item="{type:'date',placeholder:'text'}" v-model="dateValue" @change="onChange"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Date from './components/DynamicForm/models/Date/Models'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {Date},
+  data: function () {
+    return {
+      dateValue: undefined,
+      form: {
+        data: [],
+        conf: {disabled: true},
+        value: {},
+      }
+    }
+  },
+  methods: {
+    onChange (value) {
+      console.log(value)
+    }
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss" src="./assets/scss/__base.scss"/>
