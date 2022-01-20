@@ -1,8 +1,8 @@
 {
   "name": "dynamic-form",
-  "description": "",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "main": "./index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -31,6 +31,7 @@
     "url": "git+https://github.com/Funny002/dynamic-form.git"
   },
   "keywords": [
+    "vue",
     "form",
     "dynamic"
   ],

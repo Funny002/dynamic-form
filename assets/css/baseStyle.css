@@ -1,0 +1,14 @@
+.var-dynamic {
+  margin: 0;
+  padding: 0; }
+  .var-dynamic, .var-dynamic * {
+    box-sizing: border-box; }
+
+.scroll-bar {
+  overflow: auto; }
+  .scroll-bar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #dddddd; }
+  .scroll-bar::-webkit-scrollbar-thumb {
+    background-color: #bbbbbb; }

@@ -1,0 +1,6 @@
+.var-dragGable__grid--list {
+  padding: 8px;
+  min-height: 35px;
+  border: 1px solid #aaaaaa; }
+  .var-dragGable__grid--list + .var-dragGable__grid--list {
+    margin-left: 5px; }

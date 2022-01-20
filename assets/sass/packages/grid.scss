@@ -1,0 +1,12 @@
+$-grid: 5px;
+.var-dragGable__grid {
+  &--list {
+    padding: 8px;
+    min-height: 35px;
+    border: 1px solid #aaaaaa;
+
+    & + & {
+      margin-left: $-grid;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.var-dynamic-editor__ {
+  &content {
+    padding: 8px;
+    position: relative;
+    border: 1px dashed #aaaaaa;
+
+    &.is-hover > .var-dynamic-editor__btn {
+      display: block;
+    }
+
+    &.is-hover,
+    &.is-active {
+      border-color: #4488ff;
+    }
+  }
+
+  $-close: 20px;
+
+  &btn {
+    top: 0;
+    right: 0;
+    display: none;
+    width: $-close;
+    height: $-close;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    border-radius: 100%;
+    line-height: $-close;
+    transform: translate(50%, -50%) scale(0.8);
+  }
+}
