@@ -148,6 +148,19 @@ $--locker-border-color: #EBEEF5;
       .el-divider {
         margin: 15px 0;
       }
+
+      .el-collapse-item__ {
+        &header {
+          height: 35px;
+          line-height: 35px;
+          border-bottom-color: #EBEEF5 !important;
+        }
+
+        &content {
+          padding: 10px 10px 1px;
+          background-color: #f7fbff;
+        }
+      }
     }
 
     &__content {

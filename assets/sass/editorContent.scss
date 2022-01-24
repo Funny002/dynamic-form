@@ -1,11 +1,16 @@
 .var-dynamic-editor__ {
   &content {
-    padding: 8px;
+    padding: 4px;
     position: relative;
+    background-color: #ffffff;
     border: 1px dashed #aaaaaa;
 
     &.is-hover > .var-dynamic-editor__btn {
       display: block;
+    }
+
+    &.is-active {
+      border-style: solid;
     }
 
     &.is-hover,

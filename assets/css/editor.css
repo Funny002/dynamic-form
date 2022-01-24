@@ -92,6 +92,13 @@
       padding-left: 5px; }
     .var-dynamic-editor .var-dynamic__lockerForm .el-divider {
       margin: 15px 0; }
+    .var-dynamic-editor .var-dynamic__lockerForm .el-collapse-item__header {
+      height: 35px;
+      line-height: 35px;
+      border-bottom-color: #EBEEF5 !important; }
+    .var-dynamic-editor .var-dynamic__lockerForm .el-collapse-item__content {
+      padding: 10px 10px 1px;
+      background-color: #f7fbff; }
   .var-dynamic-editor .var-dynamic__content {
     top: 0;
     left: 0;

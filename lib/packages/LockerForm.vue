@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="var-dynamic__lockerForm--box">
-      <div class="var-dynamic__lockerForm--title">必填字段显示红色星号</div>
+      <div class="var-dynamic__lockerForm--title">必填字段隐藏红色星号</div>
       <div class="var-dynamic__lockerForm--body">
         <el-switch v-model="value['hideRequiredAsterisk']" size="mini" @change="v => onUpdate('hideRequiredAsterisk', v)"/>
       </div>
@@ -66,8 +66,7 @@ export default {
         size: 'mini',
         showMessage: true,
         labelWidth: '80px',
-        labelPosition: 'left',
-        hideRequiredAsterisk: true
+        labelPosition: 'left'
       }
     };
   },
@@ -82,10 +81,8 @@ export default {
   methods: {
     labelWidthInput (value) {
       value = value || '';
-      if (this.labelWidth !== value) {
-        this.labelWidth = value.replace(/[^\d]/g, '');
-        this.onUpdate('labelWidth', this.labelWidth + 'px');
-      }
+      this.labelWidth = value.replace(/[^\d]/g, '');
+      this.onUpdate('labelWidth', this.labelWidth + 'px');
     },
     onUpdate (name, value) {
       const val = {...this.value};

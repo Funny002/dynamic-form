@@ -16,29 +16,33 @@ export const Options = OptionsContent.keys().reduce(function (value, path) {
 
 const Input = {
   unfold: true,
-  icon: 'edit',
+  icon: 'el-icon-edit',
   title: '输入框',
   childList: [
-    {icon: 'el-icon-edit', isFormItem: true, name: 'Input', title: '输入框'},
-    {icon: 'el-icon-edit', isFormItem: true, name: 'Input', title: '计数器'},
-    {icon: 'el-icon-edit', isFormItem: true, name: 'Input', title: '文本域'}
+    {icon: 'el-icon-edit', isFormItem: true, name: 'Input', type: 'text', label: '输入框', title: '输入框'},
+    {icon: 'el-icon-edit', isFormItem: true, name: 'Input', type: 'password', label: '密码框', title: '密码框'},
+    {icon: 'el-icon-edit', isFormItem: true, name: 'Number', label: '计数器', title: '计数器'},
+    {icon: 'el-icon-edit', isFormItem: true, name: 'Input', type: 'textarea', label: '文本域', title: '文本域'}
   ]
 };
 
 const Grid = {
   unfold: true,
-  icon: 's-grid',
-  title: '栅格',
+  icon: 'el-icon-files',
+  title: '表单布局',
   childList: [
-    {
-      icon: 'el-icon-s-grid',
-      name: 'Grid',
-      title: '栅格栏',
-      childList: [
-        {childList: []}
-      ]
-    }
+    {icon: 'el-icon-s-grid', name: 'Grid', title: '栅格栏', childList: [{span: 24, childList: []}]},
+    {icon: 'el-icon-c-scale-to-original', name: 'Tabs', title: '标签页', value: 'default', childList: [{label: '默认', name: 'default', childList: []}]}
   ]
 };
 
-export const CollapseList = {Input, Grid};
+const Button = {
+  unfold: true,
+  icon: 'el-icon-thumb',
+  title: '按钮',
+  childList: [
+    {icon: 'el-icon-thumb', name: 'Button', title: '按钮', size: 'mini', label: '按钮'}
+  ]
+};
+
+export const CollapseList = {Grid, Input, Button};

@@ -1,9 +1,12 @@
 .var-dynamic-editor__content {
-  padding: 8px;
+  padding: 4px;
   position: relative;
+  background-color: #ffffff;
   border: 1px dashed #aaaaaa; }
   .var-dynamic-editor__content.is-hover > .var-dynamic-editor__btn {
     display: block; }
+  .var-dynamic-editor__content.is-active {
+    border-style: solid; }
   .var-dynamic-editor__content.is-hover, .var-dynamic-editor__content.is-active {
     border-color: #4488ff; }
 

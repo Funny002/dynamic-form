@@ -1,8 +1,8 @@
 <template>
-  <el-row :class="{'var-dragGable__grid': getDragGable}">
-    <el-col v-for="(col, key) in (item.childList||[])" :key="`grid-${key}`">
+  <el-row :class="{'var-dragGable__grid': getDragGable}" v-bind="rowProps(item)">
+    <el-col v-for="(col, key) in (item.childList||[])" :key="`grid-${key}`" v-bind="colProps(col)">
       <template v-if="getDragGable">
-        <drag-gable :list="(col.childList||[])" group="editor-editor" tag="div" class="var-dragGable__grid--list">
+        <drag-gable :list="(col.childList||[])" group="editor-editor" :animation="200" tag="div" class="var-dragGable__grid--list">
           <editor-content v-for="(model, modelKey) in (col.childList||[])" :key="`grid-col-${modelKey}`" :item="model" @click="onClick" @delete="col.childList.splice(modelKey,1)"/>
         </drag-gable>
       </template>
@@ -14,12 +14,13 @@
 <script>
 import {Col, Row} from 'element-ui';
 import vuedraggable from 'vuedraggable';
+import {reArray} from '../../utils/Object';
 import {PropObject} from '../../utils/Props';
 import EditorContent from '../../lib/EditorContent';
 
 export default {
   name: 'Grid',
-  inject: ['dragGable', 'setOptionsFunc'],
+  inject: ['dragGable'],
   components: {EditorContent, ElRow: Row, ElCol: Col, dragGable: vuedraggable},
   props: {
     item: PropObject({})
@@ -36,6 +37,12 @@ export default {
   methods: {
     onClick (...event) {
       this.$emit('click', ...event);
+    },
+    rowProps (row) {
+      return reArray(['justify', 'gutter', 'align'], row);
+    },
+    colProps (col) {
+      return reArray(['span', 'offset', 'push', 'pull', 'xs', 'sm', 'md', 'lg', 'xl'], col);
     }
   }
 };
