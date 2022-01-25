@@ -30,7 +30,7 @@ export default {
       return {};
     },
     getDragGable () {
-      return 'dragGable' in this;
+      return this.dragGable;
     },
     getModels () {
       return (this.models && this.models()) || {};

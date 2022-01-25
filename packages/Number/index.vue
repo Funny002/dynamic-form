@@ -1,6 +1,6 @@
 <template>
   <form-item-models :item="item">
-    <input-number v-model="value_['prop']" v-bind="getProp"/>
+    <input-number v-model="value_[item.prop]" v-bind="getProp"/>
   </form-item-models>
 </template>
 
@@ -12,6 +12,7 @@ import FormItemModels from '../../lib/FormItemModels';
 
 export default {
   name: 'Number',
+  inject: ['formValue'],
   components: {InputNumber, FormItemModels},
   props: {item: PropObject({})},
   computed: {

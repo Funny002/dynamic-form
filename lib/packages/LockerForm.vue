@@ -20,12 +20,13 @@
         </el-input>
       </div>
     </div>
-    <div class="var-dynamic__lockerForm--box">
-      <div class="var-dynamic__lockerForm--title">标签后缀</div>
-      <div class="var-dynamic__lockerForm--body">
-        <el-input :min="0" v-model="value['labelSuffix']" size="mini" @change="v => onUpdate('labelSuffix', v)" clearable/>
-      </div>
-    </div>
+    <!-- 是什么导致的呢 ？ -->
+    <!--    <div class="var-dynamic__lockerForm&#45;&#45;box">-->
+    <!--      <div class="var-dynamic__lockerForm&#45;&#45;title">标签后缀</div>-->
+    <!--      <div class="var-dynamic__lockerForm&#45;&#45;body">-->
+    <!--        <el-input v-model="value['labelSuffix']" size="mini" @change="v => onUpdate('labelSuffix', v)"/>-->
+    <!--      </div>-->
+    <!--    </div>-->
     <div class="var-dynamic__lockerForm--box">
       <div class="var-dynamic__lockerForm--title">校验结果反馈图标</div>
       <div class="var-dynamic__lockerForm--body">

@@ -54,10 +54,10 @@ export default {
     const self = this;
     return {
       dragGable: true,
-      options: () => ({}), // 不需要但涉及
+      options: undefined, // 不需要但涉及
+      formFunc: undefined, // 不需要但涉及
+      formValue: undefined, // 不需要但涉及
       indexes: () => self.index, // 激活索引
-      formFunc: () => undefined, // 不需要但涉及
-      formValue: () => undefined, // 不需要但涉及
       /* 模型 */
       models: () => Object.assign({}, Models, this.models),
       /** 方法下沉确保递归方式可以通讯 */

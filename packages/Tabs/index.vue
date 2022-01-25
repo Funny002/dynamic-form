@@ -35,7 +35,7 @@ export default {
   },
   computed: {
     getDragGable () {
-      return 'dragGable' in this;
+      return this.dragGable;
     },
     getProps () {
       return reArray(['type', 'tabPosition'], this.item);

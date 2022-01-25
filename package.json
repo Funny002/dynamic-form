@@ -1,6 +1,6 @@
 {
-  "name": "dynamic-form",
-  "version": "0.1.3",
+  "name": "dynamic-form-element-vue",
+  "version": "0.1.4",
   "private": false,
   "main": "./index.js",
   "scripts": {

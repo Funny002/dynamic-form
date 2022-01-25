@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     getDragGable () {
-      return 'dragGable' in this;
+      return this.dragGable;
     }
   },
   created () {
