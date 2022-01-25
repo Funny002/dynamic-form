@@ -45,4 +45,24 @@ const Button = {
   ]
 };
 
-export const CollapseList = {Grid, Input, Button};
+const Title = {
+  unfold: true,
+  icon: 'el-icon-tickets',
+  title: '排版',
+  childList: [
+    {icon: 'el-icon-files', name: 'Title', title: '标题', value: '标题'},
+    {icon: 'el-icon-files', name: 'Divider', title: '分割线'},
+    {icon: 'el-icon-files', name: 'Alert', title: '警告'}
+  ]
+};
+
+const Date = {
+  unfold: true,
+  icon: 'el-icon-tickets',
+  title: '时间选择器',
+  childList: [
+    {icon: 'el-icon-files', name: 'Date', isFormItem: true, title: '日期选择器', label: '日期选择器'}
+  ]
+};
+
+export const CollapseList = {Grid, Date, Title, Input, Button};

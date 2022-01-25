@@ -1,5 +1,5 @@
 <template>
-  <div v-if="getDragGable" :class="classes" @click.stop="onActive" @mouseover.stop="isHover = true" @mouseout.stop="isHover = false">
+  <div v-if="getDragGable" :style="getStyle" :class="classes" @click.stop="onActive" @mouseover.stop="isHover = true" @mouseout.stop="isHover = false">
     <component v-if="show && getModels[item.name]" :is="getModels[item.name]" :item="item" :options="getOptions[item.prop]" @click.stop="onClick"/>
     <div class="var-dynamic-editor__btn el-button--danger" @click.stop="onDelete">
       <i class="el-icon-close"></i>
@@ -23,6 +23,12 @@ export default {
     };
   },
   computed: {
+    getStyle () {
+      if (this.item.name === 'Button') {
+        return {display: 'inline-block'};
+      }
+      return {};
+    },
     getDragGable () {
       return 'dragGable' in this;
     },
